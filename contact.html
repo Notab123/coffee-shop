@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Author: Damir Argumbayev -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Coffee Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <p class="logo">Coffee Shop</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact us</h1>
+        <p>Location: Astana, Kazakhstan.</p>
+        <img class="photo" src="images/beans.jpg" alt="Roasted coffee beans">
+
+        <h2>Opening hours</h2>
+        <p>Monday to Friday: 08:00-20:00<br>Saturday and Sunday: 09:00-20:00</p>
+
+        <h2>Contact form</h2>
+        <p>Practice form. Messages are not sent.</p>
+        <form id="contact-form" action="contact.html" method="get">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+                <option value="menu">Menu question</option>
+                <option value="visit">Planning a visit</option>
+                <option value="feedback">Feedback</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Team member</h2>
+        <h3>Damir Argumbayev</h3>
+        <p>Responsible for the Menu and Contact pages.</p>
+    </main>
+
+    <footer>
+        <p>Yernur Kanapiyauly and Damir Argumbayev</p>
+    </footer>
+</body>
+</html>

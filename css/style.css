@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    background-color: #faf6ef;
+    color: #352a24;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #513525;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+a {
+    color: #784324;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #412311;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    padding: 6px 12px;
+}
+
+nav a:hover, .active {
+    background-color: #77513b;
+    color: white;
+}
+
+main {
+    width: 85%;
+    max-width: 800px;
+    margin: 25px auto;
+}
+
+h1, h2, h3 {
+    color: #513525;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.photo {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+}
+
+.round-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.highlight {
+    background-color: #f0e4d4;
+    border: 1px solid #d7c1a9;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table th, table td {
+    border: 1px solid #b49a80;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #e9d9c3;
+}
+
+#contact-form {
+    max-width: 420px;
+    background-color: white;
+    border: 1px solid #b49a80;
+    padding: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+input, select, textarea {
+    display: block;
+    width: 90%;
+    padding: 7px;
+    margin-bottom: 12px;
+    border: 1px solid #b49a80;
+    background-color: #fffdfa;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #784324;
+}
+
+button {
+    background-color: #513525;
+    color: white;
+    border: 1px solid #513525;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #77513b;
+}
+
+button:focus {
+    outline: 2px solid #b49a80;
+}
+
+footer {
+    background-color: #e9d9c3;
+    text-align: center;
+    padding: 12px;
+}
