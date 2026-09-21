@@ -7,62 +7,55 @@
     <title>Menu - Coffee Shop</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="page">
-        <header>
-            <a class="logo" href="index.html">Coffee Shop</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html" class="active">Menu</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <aside>
-            <h2>Coffee break</h2>
-            <p class="sidebar-note">A warm cup and a quiet moment.</p>
-            <h3>Explore</h3>
+<body class="page">
+    <header>
+        <a class="logo" href="index.html">Coffee Shop</a>
+        <nav>
             <ul>
-                <li><a href="menu.html#drinks">Drinks and prices</a></li>
-                <li><a href="about.html#gallery">Coffee gallery</a></li>
-                <li><a href="contact.html#contact-form">Leave a message</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="sidebar-note">
-                <h3>Today's idea</h3>
-                <p>Cappuccino + croissant</p>
-                <p>2,000 KZT</p>
-            </div>
-        </aside>
-        <main>
+        </nav>
+    </header>
+    <aside>
+        <h2>Coffee break</h2>
+        <p class="sidebar-note">A warm cup and a quiet moment.</p>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="menu.html#drinks">Drinks and prices</a></li>
+            <li><a href="about.html#gallery">Coffee gallery</a></li>
+            <li><a href="contact.html#contact-form">Leave a message</a></li>
+        </ul>
+        <div class="sidebar-note">
+            <h3>Today's idea</h3>
+            <p>Cappuccino + croissant</p>
+            <p>2,000 KZT</p>
+        </div>
+    </aside>
+    <main>
         <h1>Our menu</h1>
         <p>Choose a drink and a snack. All prices are in tenge.</p>
         <div class="card-row">
-            <article class="card">
+            <form class="card" action="contact.html#contact-form">
                 <img src="images/espresso.jpg" alt="Black coffee in a white cup">
                 <h3>Black coffee</h3>
                 <p>Choose a small espresso or a larger Americano.</p>
-                <form class="card-action" action="contact.html#contact-form">
-                    <button type="submit">Ask about coffee</button>
-                </form>
-            </article>
-            <article class="card">
+                <button type="submit">Ask about coffee</button>
+            </form>
+            <form class="card" action="contact.html#contact-form">
                 <img src="images/latte.jpg" alt="Two cups of coffee with milk">
                 <h3>Milk coffee</h3>
                 <p>Try a latte or cappuccino with your breakfast.</p>
-                <form class="card-action" action="contact.html#contact-form">
-                    <button type="submit">Ask about drinks</button>
-                </form>
-            </article>
-            <article class="card">
+                <button type="submit">Ask about drinks</button>
+            </form>
+            <form class="card" action="contact.html#contact-form">
                 <img src="images/croissant.jpg" alt="A freshly baked croissant">
                 <h3>Something sweet</h3>
                 <p>Add a croissant to your favourite hot drink.</p>
-                <form class="card-action" action="contact.html#contact-form">
-                    <button type="submit">Ask about snacks</button>
-                </form>
-            </article>
+                <button type="submit">Ask about snacks</button>
+            </form>
         </div>
         <h2 id="drinks">Drinks and snacks</h2>
         <table>
@@ -80,10 +73,9 @@
             <li>Tell the barista your order.</li>
             <li>Pay and collect your order.</li>
         </ol>
-        </main>
-        <footer>
-            <p>Yernur Kanapiyauly and Damir Argumbayev</p>
-        </footer>
-    </div>
+    </main>
+    <footer>
+        <p>Yernur Kanapiyauly and Damir Argumbayev</p>
+    </footer>
 </body>
 </html>

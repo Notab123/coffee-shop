@@ -7,39 +7,38 @@
     <title>Contact - Coffee Shop</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="page">
-        <header>
-            <a class="logo" href="index.html">Coffee Shop</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <aside>
-            <h2>Coffee break</h2>
-            <p class="sidebar-note">A warm cup and a quiet moment.</p>
-            <h3>Explore</h3>
+<body class="page">
+    <header>
+        <a class="logo" href="index.html">Coffee Shop</a>
+        <nav>
             <ul>
-                <li><a href="menu.html#drinks">Drinks and prices</a></li>
-                <li><a href="about.html#gallery">Coffee gallery</a></li>
-                <li><a href="contact.html#contact-form">Leave a message</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-            <div class="sidebar-note">
-                <h3>Today's idea</h3>
-                <p>Cappuccino + croissant</p>
-                <p>2,000 KZT</p>
-            </div>
-        </aside>
-        <main>
+        </nav>
+    </header>
+    <aside>
+        <h2>Coffee break</h2>
+        <p class="sidebar-note">A warm cup and a quiet moment.</p>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="menu.html#drinks">Drinks and prices</a></li>
+            <li><a href="about.html#gallery">Coffee gallery</a></li>
+            <li><a href="contact.html#contact-form">Leave a message</a></li>
+        </ul>
+        <div class="sidebar-note">
+            <h3>Today's idea</h3>
+            <p>Cappuccino + croissant</p>
+            <p>2,000 KZT</p>
+        </div>
+    </aside>
+    <main>
         <h1>Contact us</h1>
         <p>Have a question about the menu? Send us a message.</p>
         <div class="contact-row">
-            <section class="visit-info">
+            <div class="visit-info">
                 <h2>Visit us</h2>
                 <img class="photo" src="images/beans.jpg" alt="Roasted coffee beans">
                 <p>Location: Astana, Kazakhstan.</p>
@@ -47,8 +46,8 @@
                 <p>Monday to Friday: 08:00-20:00<br>Saturday and Sunday: 09:00-20:00</p>
                 <h3>Team member</h3>
                 <p>Damir Argumbayev is responsible for the Menu and Contact pages.</p>
-            </section>
-            <section class="message-section">
+            </div>
+            <div class="message-section">
                 <h2>Contact form</h2>
                 <form id="contact-form" action="https://formsubmit.co/aliyaakhmetova12@gmail.com" method="post">
                     <label for="name">Name</label>
@@ -65,12 +64,11 @@
                     <textarea id="message" name="message" rows="4" required></textarea>
                     <button type="submit">Submit</button>
                 </form>
-            </section>
+            </div>
         </div>
-        </main>
-        <footer>
-            <p>Yernur Kanapiyauly and Damir Argumbayev</p>
-        </footer>
-    </div>
+    </main>
+    <footer>
+        <p>Yernur Kanapiyauly and Damir Argumbayev</p>
+    </footer>
 </body>
 </html>

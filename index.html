@@ -7,63 +7,56 @@
     <title>Home - Coffee Shop</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="page">
-        <header>
-            <a class="logo" href="index.html">Coffee Shop</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <aside>
-            <h2>Coffee break</h2>
-            <p class="sidebar-note">A warm cup and a quiet moment.</p>
-            <h3>Explore</h3>
+<body class="page">
+    <header>
+        <a class="logo" href="index.html">Coffee Shop</a>
+        <nav>
             <ul>
-                <li><a href="menu.html#drinks">Drinks and prices</a></li>
-                <li><a href="about.html#gallery">Coffee gallery</a></li>
-                <li><a href="contact.html#contact-form">Leave a message</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="sidebar-note">
-                <h3>Today's idea</h3>
-                <p>Cappuccino + croissant</p>
-                <p>2,000 KZT</p>
-            </div>
-        </aside>
-        <main>
+        </nav>
+    </header>
+    <aside>
+        <h2>Coffee break</h2>
+        <p class="sidebar-note">A warm cup and a quiet moment.</p>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="menu.html#drinks">Drinks and prices</a></li>
+            <li><a href="about.html#gallery">Coffee gallery</a></li>
+            <li><a href="contact.html#contact-form">Leave a message</a></li>
+        </ul>
+        <div class="sidebar-note">
+            <h3>Today's idea</h3>
+            <p>Cappuccino + croissant</p>
+            <p>2,000 KZT</p>
+        </div>
+    </aside>
+    <main>
         <h1>Welcome to Coffee Shop</h1>
         <p>We serve coffee, hot chocolate and fresh croissants.</p>
         <h2>Our favourites</h2>
         <div class="card-row">
-            <article class="card">
+            <form class="card" action="menu.html#drinks">
                 <img src="images/coffee.jpg" alt="A cup of cappuccino">
                 <h3>Cappuccino</h3>
                 <p>Coffee with milk and a soft layer of foam. 1,200 KZT.</p>
-                <form class="card-action" action="menu.html#drinks">
-                    <button type="submit">View drinks</button>
-                </form>
-            </article>
-            <article class="card">
+                <button type="submit">View drinks</button>
+            </form>
+            <form class="card" action="menu.html#snacks">
                 <img src="images/croissant.jpg" alt="A croissant with a golden crust">
                 <h3>Croissant</h3>
                 <p>A buttery pastry for breakfast or a quick snack. 800 KZT.</p>
-                <form class="card-action" action="menu.html#snacks">
-                    <button type="submit">View snacks</button>
-                </form>
-            </article>
-            <article class="card">
+                <button type="submit">View snacks</button>
+            </form>
+            <form class="card" action="about.html#gallery">
                 <img src="images/break.jpg" alt="Friends holding their cups of coffee">
                 <h3>Coffee break</h3>
                 <p>Take a break and enjoy a warm drink with friends.</p>
-                <form class="card-action" action="about.html#gallery">
-                    <button type="submit">See gallery</button>
-                </form>
-            </article>
+                <button type="submit">See gallery</button>
+            </form>
         </div>
         <h2>Why visit us?</h2>
         <ul>
@@ -76,10 +69,9 @@
             <p>Cappuccino and a croissant: a warm drink and a simple snack to start the day.</p>
             <a href="menu.html">See the full menu</a>
         </div>
-        </main>
-        <footer>
-            <p>Yernur Kanapiyauly and Damir Argumbayev</p>
-        </footer>
-    </div>
+    </main>
+    <footer>
+        <p>Yernur Kanapiyauly and Damir Argumbayev</p>
+    </footer>
 </body>
 </html>

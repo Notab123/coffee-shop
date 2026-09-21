@@ -144,8 +144,9 @@ h3 {
     margin: 14px 0 0;
 }
 
-.card-action {
+.card button {
     margin-top: auto;
+    align-self: flex-start;
 }
 
 button {
@@ -162,7 +163,7 @@ button:hover {
     background-color: #77513b;
 }
 
-button:focus, a:focus, .gallery figure:focus {
+button:focus, a:focus {
     outline: 2px solid #b49a80;
     outline-offset: 3px;
 }
@@ -214,7 +215,7 @@ table th {
     gap: 14px;
 }
 
-.gallery figure {
+.gallery-item {
     position: relative;
     margin: 0;
 }
@@ -226,18 +227,19 @@ table th {
     object-fit: cover;
 }
 
-.gallery figcaption {
+.gallery-item p {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 10px;
+    margin: 0;
     background-color: #352a24e6;
     color: white;
     opacity: 0;
 }
 
-.gallery figure:hover figcaption, .gallery figure:focus figcaption {
+.gallery-item:hover p {
     opacity: 1;
 }
 
@@ -361,7 +363,7 @@ footer {
         grid-auto-rows: 150px;
     }
 
-    .gallery figcaption {
+    .gallery-item p {
         opacity: 1;
         padding: 6px;
         font-size: 14px;
@@ -374,7 +376,7 @@ footer {
 }
 
 @media (hover: none) {
-    .gallery figcaption {
+    .gallery-item p {
         opacity: 1;
     }
 }
