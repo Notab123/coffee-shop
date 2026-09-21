@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: #faf6ef;
@@ -7,17 +11,54 @@ body {
     line-height: 1.5;
 }
 
+.page {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
 header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
     background-color: #513525;
     color: white;
-    text-align: center;
-    padding: 15px;
 }
 
 .logo {
+    color: white;
     font-size: 26px;
     font-weight: bold;
-    margin: 0 0 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+}
+
+nav a:hover, nav a:focus, nav a.active {
+    background-color: #77513b;
+    color: white;
 }
 
 a {
@@ -26,24 +67,34 @@ a {
 }
 
 a:hover {
-    color: #412311;
+    text-decoration: underline;
 }
 
-nav a {
-    display: inline-block;
-    color: white;
-    padding: 6px 12px;
+aside {
+    grid-area: sidebar;
+    padding: 24px;
+    background-color: #f0e4d4;
+    border-right: 1px solid #d7c1a9;
 }
 
-nav a:hover, .active {
-    background-color: #77513b;
-    color: white;
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 12px;
+}
+
+aside h2 {
+    font-size: 21px;
 }
 
 main {
-    width: 85%;
-    max-width: 800px;
-    margin: 25px auto;
+    grid-area: main;
+    min-width: 0;
+    padding: 24px;
 }
 
 h1, h2, h3 {
@@ -51,34 +102,80 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 30px;
+    margin-top: 0;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 23px;
 }
 
 h3 {
     font-size: 18px;
 }
 
-.photo {
-    width: 240px;
-    max-width: 100%;
-    height: auto;
+.card-row {
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
 }
 
-.round-image {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    background-color: white;
+    border: 1px solid #d7c1a9;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px #00000026;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 14px 0 0;
+}
+
+.card-action {
+    margin-top: auto;
+}
+
+button {
+    padding: 10px 14px;
+    border: 1px solid #513525;
+    background-color: #513525;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #77513b;
+}
+
+button:focus, a:focus, .gallery figure:focus {
+    outline: 2px solid #b49a80;
+    outline-offset: 3px;
 }
 
 .highlight {
+    padding: 16px;
+    margin-top: 24px;
     background-color: #f0e4d4;
     border: 1px solid #d7c1a9;
-    padding: 15px;
-    margin-top: 20px;
+}
+
+.highlight h2 {
+    margin-top: 0;
 }
 
 table {
@@ -88,8 +185,8 @@ table {
 }
 
 table th, table td {
+    padding: 10px;
     border: 1px solid #b49a80;
-    padding: 8px;
     text-align: left;
 }
 
@@ -97,11 +194,74 @@ table th {
     background-color: #e9d9c3;
 }
 
+.team-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.round-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 160px;
+    gap: 14px;
+}
+
+.gallery figure {
+    position: relative;
+    margin: 0;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #352a24e6;
+    color: white;
+    opacity: 0;
+}
+
+.gallery figure:hover figcaption, .gallery figure:focus figcaption {
+    opacity: 1;
+}
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.visit-info, .message-section {
+    flex: 1;
+    min-width: 0;
+}
+
+.photo {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+}
+
 #contact-form {
-    max-width: 420px;
-    background-color: white;
+    padding: 16px;
     border: 1px solid #b49a80;
-    padding: 15px;
+    background-color: white;
 }
 
 label {
@@ -111,37 +271,110 @@ label {
 
 input, select, textarea {
     display: block;
-    width: 90%;
-    padding: 7px;
-    margin-bottom: 12px;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 14px;
     border: 1px solid #b49a80;
     background-color: #fffdfa;
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
 
+textarea {
+    resize: vertical;
+}
+
 input:focus, select:focus, textarea:focus {
     outline: 2px solid #784324;
 }
 
-button {
-    background-color: #513525;
-    color: white;
-    border: 1px solid #513525;
-    padding: 8px 16px;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #77513b;
-}
-
-button:focus {
-    outline: 2px solid #b49a80;
-}
-
 footer {
+    grid-area: footer;
+    padding: 12px 24px;
     background-color: #e9d9c3;
     text-align: center;
-    padding: 12px;
+}
+
+@media (max-width: 800px) {
+    .page {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: "header" "sidebar" "main" "footer";
+    }
+
+    aside {
+        border-right: 0;
+        border-bottom: 1px solid #d7c1a9;
+    }
+
+    aside ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .sidebar-note {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    header, .card-row, .team-row, .contact-row {
+        flex-direction: column;
+    }
+
+    header {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    header, aside, main {
+        padding: 18px;
+    }
+
+    nav ul {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 6px 8px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card {
+        min-height: 400px;
+    }
+
+    .team-row {
+        align-items: flex-start;
+    }
+
+    .visit-info, .message-section {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+    }
+
+    .gallery figcaption {
+        opacity: 1;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 7px;
+        font-size: 14px;
+    }
+}
+
+@media (hover: none) {
+    .gallery figcaption {
+        opacity: 1;
+    }
 }
