@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Coffee Shop</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
-    <header>
-        <a class="logo" href="index.html">Coffee Shop</a>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid px-0">
+            <a class="logo navbar-brand" href="index.html">Coffee Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="mainNav" aria-label="Main navigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <aside>
         <h2>Coffee break</h2>
@@ -34,28 +40,28 @@
             <p>2,000 KZT</p>
         </div>
     </aside>
-    <main>
+    <main class="container-fluid">
         <h1>Welcome to Coffee Shop</h1>
         <p>We serve coffee, hot chocolate and fresh croissants.</p>
         <h2>Our favourites</h2>
-        <div class="card-row">
-            <form class="card" action="menu.html#drinks">
+        <div class="media-card-row">
+            <form class="feature-card" action="menu.html#drinks">
                 <img src="images/coffee.jpg" alt="A cup of cappuccino">
                 <h3>Cappuccino</h3>
                 <p>Coffee with milk and a soft layer of foam. 1,200 KZT.</p>
-                <button type="submit">View drinks</button>
+                <button class="btn btn-primary btn-sm" type="submit">View drinks</button>
             </form>
-            <form class="card" action="menu.html#snacks">
+            <form class="feature-card" action="menu.html#snacks">
                 <img src="images/croissant.jpg" alt="A croissant with a golden crust">
                 <h3>Croissant</h3>
                 <p>A buttery pastry for breakfast or a quick snack. 800 KZT.</p>
-                <button type="submit">View snacks</button>
+                <button class="btn btn-primary btn-sm" type="submit">View snacks</button>
             </form>
-            <form class="card" action="about.html#gallery">
+            <form class="feature-card" action="about.html#gallery">
                 <img src="images/break.jpg" alt="Friends holding their cups of coffee">
                 <h3>Coffee break</h3>
                 <p>Take a break and enjoy a warm drink with friends.</p>
-                <button type="submit">See gallery</button>
+                <button class="btn btn-primary btn-sm" type="submit">See gallery</button>
             </form>
         </div>
         <h2>Why visit us?</h2>
@@ -67,11 +73,15 @@
         <div class="highlight">
             <h2>Try our breakfast</h2>
             <p>Cappuccino and a croissant: a warm drink and a simple snack to start the day.</p>
-            <a href="menu.html">See the full menu</a>
+            <div class="btn-group" role="group" aria-label="Explore more">
+                <a class="btn btn-primary" href="menu.html">See the full menu</a>
+                <a class="btn btn-outline-primary" href="contact.html">Contact us</a>
+            </div>
         </div>
     </main>
     <footer>
         <p>Yernur Kanapiyauly and Damir Argumbayev</p>
     </footer>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>

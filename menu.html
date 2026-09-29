@@ -1,53 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Coffee Shop in Astana: drinks, pastries, and a welcoming place to pause.">
-  <title>Menu | Coffee Shop</title>
-  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Author: Damir Argumbayev -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Coffee Shop</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
-<header class="site-header">
-  <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
-    <div class="container py-2">
-      <a class="navbar-brand" href="index.html">Coffee Shop<span class="text-warning">.</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto gap-lg-2">
-          <li class="nav-item"><a class="nav-link px-3 "  href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link px-3 active" aria-current="page" href="menu.html">Menu</a></li>
-          <li class="nav-item"><a class="nav-link px-3 "  href="about.html">About us</a></li>
-          <li class="nav-item"><a class="nav-link px-3 "  href="contact.html">Contact</a></li>
+<body class="page">
+    <header>
+        <a class="logo" href="index.html">Coffee Shop</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside>
+        <h2>Coffee break</h2>
+        <p class="sidebar-note">A warm cup and a quiet moment.</p>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="menu.html#drinks">Drinks and prices</a></li>
+            <li><a href="about.html#gallery">Coffee gallery</a></li>
+            <li><a href="contact.html#contact-form">Leave a message</a></li>
         </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<main id="main-content" class="flex-grow-1">
-<section class="container py-5" aria-labelledby="menu-title">
-  <p class="eyebrow mb-2">Made for your coffee break</p><h1 id="menu-title" class="mb-3">Our menu</h1>
-  <p class="lead mb-4">Choose a drink, add something sweet, and enjoy. All prices are in tenge.</p>
-  <div class="row g-4 mt-lg-4" aria-label="Featured menu items">
-    <div class="col-sm-6 col-lg-4"><article class="card h-100"><img class="card-img-top" src="images/espresso.jpg" alt="Espresso in a white cup"><div class="card-body p-4 d-flex flex-column"><h2 class="h4 card-title">Black coffee</h2><p class="card-text mb-4">A focused espresso or a smooth, longer Americano.</p><a class="btn btn-outline-primary btn-sm mt-auto" href="#drinks">See prices</a></div></article></div>
-    <div class="col-sm-6 col-lg-4"><article class="card h-100"><img class="card-img-top" src="images/latte.jpg" alt="Two milk coffees"><div class="card-body p-4 d-flex flex-column"><h2 class="h4 card-title">Milk coffee</h2><p class="card-text mb-4">A velvety latte or the classic cappuccino.</p><a class="btn btn-outline-primary btn-sm mt-auto" href="#drinks">See prices</a></div></article></div>
-    <div class="col-sm-6 col-lg-4"><article class="card h-100"><img class="card-img-top" src="images/croissant.jpg" alt="Fresh croissant"><div class="card-body p-4 d-flex flex-column"><h2 class="h4 card-title">Fresh pastry</h2><p class="card-text mb-4">A golden croissant to pair with your favourite drink.</p><a class="btn btn-outline-primary btn-sm mt-auto" href="#snacks">See price</a></div></article></div>
-  </div>
-</section>
-<section class="container pb-5" aria-labelledby="drinks">
-  <div class="row g-4 mt-lg-4">
-    <div class="col-lg-6"><div class="surface p-3 p-sm-4 h-100"><h2 id="drinks" class="mb-3">Drinks and snacks</h2><div class="table-responsive"><table class="table table-bordered align-middle mb-0"><caption class="visually-hidden">Coffee Shop menu prices</caption><thead><tr><th scope="col">Item</th><th scope="col">Size</th><th scope="col">Price</th></tr></thead><tbody><tr><th scope="row">Espresso</th><td>30 ml</td><td>700 KZT</td></tr><tr><th scope="row">Americano</th><td>250 ml</td><td>900 KZT</td></tr><tr><th scope="row">Cappuccino</th><td>250 ml</td><td>1,200 KZT</td></tr><tr><th scope="row">Latte</th><td>300 ml</td><td>1,300 KZT</td></tr><tr><th scope="row">Hot chocolate</th><td>250 ml</td><td>1,100 KZT</td></tr><tr id="snacks"><th scope="row">Croissant</th><td>80 g</td><td>800 KZT</td></tr></tbody></table></div></div></div>
-    <div class="col-lg-6"><div class="muted-surface p-4 p-sm-5 h-100"><p class="eyebrow mb-2">Simple as it should be</p><h2 class="mb-3">How to order</h2><ol class="mb-4"><li>Choose a drink and a snack.</li><li>Tell the barista your order.</li><li>Pay and collect your order.</li></ol><div class="btn-group" role="group" aria-label="Next steps"><a class="btn btn-primary" href="contact.html">Ask a question</a><a class="btn btn-outline-primary" href="about.html">About us</a></div></div></div>
-  </div>
-</section>
-</main>
-<footer class="site-footer mt-auto">
-  <div class="container py-4 d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
-    <p class="mb-0">© 2026 Coffee Shop · DMT · SE-2509</p>
-    <p class="mb-0">Yernur Kanapiyauly · Damir Argumbayev</p>
-  </div>
-</footer>
-<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+        <div class="sidebar-note">
+            <h3>Today's idea</h3>
+            <p>Cappuccino + croissant</p>
+            <p>2,000 KZT</p>
+        </div>
+    </aside>
+    <main>
+        <h1>Our menu</h1>
+        <p>Choose a drink and a snack. All prices are in tenge.</p>
+        <div class="card-row">
+            <form class="card" action="contact.html#contact-form">
+                <img src="images/espresso.jpg" alt="Black coffee in a white cup">
+                <h3>Black coffee</h3>
+                <p>Choose a small espresso or a larger Americano.</p>
+                <button type="submit">Ask about coffee</button>
+            </form>
+            <form class="card" action="contact.html#contact-form">
+                <img src="images/latte.jpg" alt="Two cups of coffee with milk">
+                <h3>Milk coffee</h3>
+                <p>Try a latte or cappuccino with your breakfast.</p>
+                <button type="submit">Ask about drinks</button>
+            </form>
+            <form class="card" action="contact.html#contact-form">
+                <img src="images/croissant.jpg" alt="A freshly baked croissant">
+                <h3>Something sweet</h3>
+                <p>Add a croissant to your favourite hot drink.</p>
+                <button type="submit">Ask about snacks</button>
+            </form>
+        </div>
+        <h2 id="drinks">Drinks and snacks</h2>
+        <table>
+            <tr><th>Item</th><th>Size</th><th>Price</th></tr>
+            <tr><td>Espresso</td><td>30 ml</td><td>700 KZT</td></tr>
+            <tr><td>Americano</td><td>250 ml</td><td>900 KZT</td></tr>
+            <tr><td>Cappuccino</td><td>250 ml</td><td>1,200 KZT</td></tr>
+            <tr><td>Latte</td><td>300 ml</td><td>1,300 KZT</td></tr>
+            <tr><td>Hot chocolate</td><td>250 ml</td><td>1,100 KZT</td></tr>
+            <tr id="snacks"><td>Croissant</td><td>80 g</td><td>800 KZT</td></tr>
+        </table>
+        <h2>How to order</h2>
+        <ol>
+            <li>Choose a drink and a snack.</li>
+            <li>Tell the barista your order.</li>
+            <li>Pay and collect your order.</li>
+        </ol>
+    </main>
+    <footer>
+        <p>Yernur Kanapiyauly and Damir Argumbayev</p>
+    </footer>
 </body>
 </html>

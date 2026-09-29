@@ -1,56 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Coffee Shop in Astana: drinks, pastries, and a welcoming place to pause.">
-  <title>Contact | Coffee Shop</title>
-  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Author: Damir Argumbayev -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Coffee Shop</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
-<header class="site-header">
-  <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Main navigation">
-    <div class="container py-2">
-      <a class="navbar-brand" href="index.html">Coffee Shop<span class="text-warning">.</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto gap-lg-2">
-          <li class="nav-item"><a class="nav-link px-3 "  href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link px-3 "  href="menu.html">Menu</a></li>
-          <li class="nav-item"><a class="nav-link px-3 "  href="about.html">About us</a></li>
-          <li class="nav-item"><a class="nav-link px-3 active" aria-current="page" href="contact.html">Contact</a></li>
+<body class="page">
+    <header>
+        <a class="logo" href="index.html">Coffee Shop</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside>
+        <h2>Coffee break</h2>
+        <p class="sidebar-note">A warm cup and a quiet moment.</p>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="menu.html#drinks">Drinks and prices</a></li>
+            <li><a href="about.html#gallery">Coffee gallery</a></li>
+            <li><a href="contact.html#contact-form">Leave a message</a></li>
         </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<main id="main-content" class="flex-grow-1">
-<section class="container py-5" aria-labelledby="contact-title">
-  <p class="eyebrow mb-2">Say hello</p><h1 id="contact-title" class="mb-3">Contact us</h1><p class="lead mb-4">Have a question about the menu or planning a visit? Send us a message.</p>
-  <div class="row g-4 mt-lg-4">
-    <div class="col-lg-6"><div class="muted-surface p-4 p-sm-5 h-100"><h2 class="mb-3">Visit us</h2><img class="section-image mb-4" src="images/beans.jpg" alt="Roasted coffee beans" loading="lazy"><p><strong>Location:</strong> Astana, Kazakhstan</p><h3>Opening hours</h3><p class="mb-0">Monday to Friday: 08:00–20:00<br>Saturday and Sunday: 09:00–20:00</p></div></div>
-    <div class="col-lg-6"><div class="surface p-4 p-sm-5 h-100"><h2 class="mb-3">Send a message</h2>
-      <form id="contact-form" action="https://formsubmit.co/aliyaakhmetova12@gmail.com" method="post">
-        <div class="row g-3">
-          <div class="col-sm-6"><label class="form-label" for="name">Name</label><input class="form-control" id="name" name="name" type="text" autocomplete="name" required></div>
-          <div class="col-sm-6"><label class="form-label" for="email">Email</label><input class="form-control" id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="col-12"><label class="form-label" for="topic">Topic</label><select class="form-select" id="topic" name="topic"><option value="menu">Menu question</option><option value="visit">Planning a visit</option><option value="feedback">Feedback</option></select></div>
-          <div class="col-12"><label class="form-label" for="message">Message</label><textarea class="form-control" id="message" name="message" rows="5" required></textarea></div>
-          <div class="col-12"><div class="form-check"><input class="form-check-input" id="reply" name="reply" type="checkbox" value="yes"><label class="form-check-label" for="reply">I would like a reply by email</label></div></div>
-          <div class="col-12 pt-2"><button class="btn btn-primary btn-lg" type="submit">Send message</button></div>
+        <div class="sidebar-note">
+            <h3>Today's idea</h3>
+            <p>Cappuccino + croissant</p>
+            <p>2,000 KZT</p>
         </div>
-      </form>
-    </div></div>
-  </div>
-</section>
-</main>
-<footer class="site-footer mt-auto">
-  <div class="container py-4 d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
-    <p class="mb-0">© 2026 Coffee Shop · DMT · SE-2509</p>
-    <p class="mb-0">Yernur Kanapiyauly · Damir Argumbayev</p>
-  </div>
-</footer>
-<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    </aside>
+    <main>
+        <h1>Contact us</h1>
+        <p>Have a question about the menu? Send us a message.</p>
+        <div class="contact-row">
+            <div class="visit-info">
+                <h2>Visit us</h2>
+                <img class="photo" src="images/beans.jpg" alt="Roasted coffee beans">
+                <p>Location: Astana, Kazakhstan.</p>
+                <h3>Opening hours</h3>
+                <p>Monday to Friday: 08:00-20:00<br>Saturday and Sunday: 09:00-20:00</p>
+                <h3>Team member</h3>
+                <p>Damir Argumbayev is responsible for the Menu and Contact pages.</p>
+            </div>
+            <div class="message-section">
+                <h2>Contact form</h2>
+                <form id="contact-form" action="https://formsubmit.co/aliyaakhmetova12@gmail.com" method="post">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic">
+                        <option value="menu">Menu question</option>
+                        <option value="visit">Planning a visit</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Yernur Kanapiyauly and Damir Argumbayev</p>
+    </footer>
 </body>
 </html>
