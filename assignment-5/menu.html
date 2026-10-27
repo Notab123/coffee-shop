@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Coffee Shop</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+    <header class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid px-0">
+            <a class="logo navbar-brand" href="index.html">Coffee Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="mainNav" aria-label="Main navigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="menu.html" aria-current="page">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <aside>
+        <h2>Coffee break</h2>
+        <p class="sidebar-note">A warm cup and a quiet moment.</p>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="menu.html#drinks">Drinks and prices</a></li>
+            <li><a href="about.html#gallery">Coffee gallery</a></li>
+            <li><a href="contact.html#contact-form">Leave a message</a></li>
+        </ul>
+        <button class="btn btn-primary btn-sm sidebar-subscribe" id="subscribe-open" type="button">Subscribe to news</button>
+        <div class="sidebar-note">
+            <h3>Today's idea</h3>
+            <p>Cappuccino + croissant</p>
+            <p>2,000 KZT</p>
+        </div>
+    </aside>
+    <main class="container-fluid">
+        <h1>Our menu</h1>
+        <p>Choose a drink and a snack. All prices are in tenge.</p>
+        <div class="row g-3 mt-lg-4">
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <article class="card h-100">
+                    <img class="card-img-top" src="images/espresso.jpg" alt="Black coffee in a white cup">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">Black coffee</h3>
+                        <p class="card-text">Choose a small espresso or a larger Americano.</p>
+                        <a class="btn btn-primary btn-sm mt-auto align-self-start" href="contact.html#contact-form">Ask about coffee</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <article class="card h-100">
+                    <img class="card-img-top" src="images/latte.jpg" alt="Two cups of coffee with milk">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">Milk coffee</h3>
+                        <p class="card-text">Try a latte or cappuccino with your breakfast.</p>
+                        <a class="btn btn-primary btn-sm mt-auto align-self-start" href="contact.html#contact-form">Ask about drinks</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <article class="card h-100">
+                    <img class="card-img-top" src="images/croissant.jpg" alt="A freshly baked croissant">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">Something sweet</h3>
+                        <p class="card-text">Add a croissant to your favourite hot drink.</p>
+                        <a class="btn btn-primary btn-sm mt-auto align-self-start" href="contact.html#contact-form">Ask about snacks</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <h2 class="mt-4" id="drinks">Drinks and snacks</h2>
+        <p>The table is built from a list of items in the script. Filter it by category:</p>
+        <div class="menu-filters" role="group" aria-label="Filter the menu by category">
+            <button class="filter-btn btn btn-primary btn-sm" type="button" data-filter="all">All items</button>
+            <button class="filter-btn btn btn-outline-primary btn-sm" type="button" data-filter="coffee">Coffee</button>
+            <button class="filter-btn btn btn-outline-primary btn-sm" type="button" data-filter="drinks">Other drinks</button>
+            <button class="filter-btn btn btn-outline-primary btn-sm" type="button" data-filter="snacks" id="snacks">Snacks</button>
+        </div>
+        <p class="menu-count" id="menu-count"></p>
+        <table class="table table-bordered">
+            <thead>
+                <tr><th>Item</th><th>Size</th><th>Price</th></tr>
+            </thead>
+            <tbody id="menu-body"></tbody>
+        </table>
+        <h2>How to order</h2>
+        <ol>
+            <li>Choose a drink and a snack.</li>
+            <li>Tell the barista your order.</li>
+            <li>Pay and collect your order.</li>
+        </ol>
+    </main>
+    <footer>
+        <p class="site-datetime" id="site-datetime" aria-live="polite">Loading current date and time...</p>
+        <button class="btn btn-outline-primary btn-sm" id="theme-btn" type="button" aria-pressed="false">Night mode</button>
+        <p>Yernur Kanapiyauly and Damir Argumbayev</p>
+    </footer>
+    <div class="popup-overlay" id="subscribe-popup" role="dialog" aria-modal="true" aria-labelledby="subscribe-title" aria-hidden="true">
+        <div class="popup-box">
+            <button class="popup-close" type="button" aria-label="Close the subscription form">&times;</button>
+            <h2 id="subscribe-title">Subscribe to our news</h2>
+            <p>Get menu updates and offers by email.</p>
+            <form id="subscribe-form" novalidate>
+                <label class="form-label" for="sub-email">Email</label>
+                <input class="form-control" id="sub-email" name="email" type="email" autocomplete="email" required aria-describedby="sub-email-error">
+                <div class="invalid-feedback" id="sub-email-error"></div>
+                <label class="form-label mt-2" for="sub-password">Password</label>
+                <input class="form-control" id="sub-password" name="password" type="password" autocomplete="new-password" required aria-describedby="sub-password-error">
+                <div class="invalid-feedback" id="sub-password-error"></div>
+                <div class="form-text">At least 8 characters.</div>
+                <label class="form-label mt-2" for="sub-confirm">Confirm password</label>
+                <input class="form-control" id="sub-confirm" name="confirm" type="password" autocomplete="new-password" required aria-describedby="sub-confirm-error">
+                <div class="invalid-feedback" id="sub-confirm-error"></div>
+                <button class="btn btn-primary mt-3" type="submit">Subscribe</button>
+            </form>
+            <div class="popup-success" id="subscribe-success" hidden>
+                <p class="mb-0">Thank you for subscribing!</p>
+            </div>
+        </div>
+    </div>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
