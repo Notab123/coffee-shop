@@ -144,12 +144,13 @@ h3 {
     margin: 14px 0 0;
 }
 
-.card button {
+.card-action {
     margin-top: auto;
     align-self: flex-start;
+    display: inline-block;
 }
 
-button {
+button, .card-action {
     padding: 10px 14px;
     border: 1px solid #513525;
     background-color: #513525;
@@ -159,8 +160,10 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover, .card-action:hover {
     background-color: #77513b;
+    color: white;
+    text-decoration: none;
 }
 
 button:focus, a:focus {
@@ -236,11 +239,6 @@ table th {
     margin: 0;
     background-color: #352a24e6;
     color: white;
-    opacity: 0;
-}
-
-.gallery-item:hover p {
-    opacity: 1;
 }
 
 .contact-row {
@@ -364,7 +362,6 @@ footer {
     }
 
     .gallery-item p {
-        opacity: 1;
         padding: 6px;
         font-size: 14px;
     }
@@ -372,11 +369,5 @@ footer {
     table th, table td {
         padding: 7px;
         font-size: 14px;
-    }
-}
-
-@media (hover: none) {
-    .gallery-item p {
-        opacity: 1;
     }
 }
