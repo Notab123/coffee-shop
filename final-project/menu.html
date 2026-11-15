@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Coffee Shop drinks and snacks, search the local menu and explore a guide to popular hot coffees.">
+    <title>Menu | Coffee Shop</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="menu">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="site-container header-inner">
+            <a class="site-logo" href="index.html">Coffee Shop</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link active" href="menu.html" aria-current="page">Menu</a></li>
+                    <li><a class="nav-link" href="about.html">About us</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="login.html" data-auth-link>Log in</a></li>
+                    <li><a class="nav-link nav-signup" href="signup.html">Sign up</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode">
+                <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span></span>
+                <span class="theme-label" data-theme-label>Light</span>
+            </button>
+        </div>
+    </header>
+    <main class="site-container page-main" id="main-content" tabindex="-1">
+        <section aria-labelledby="menu-title">
+            <div class="page-intro">
+                <p class="eyebrow">Drinks and something to eat</p>
+                <h1 id="menu-title">Our menu</h1>
+                <p>Eight straightforward favourites, with every size and price listed in Kazakhstani tenge.</p>
+            </div>
+            <div class="menu-controls">
+                <div class="field search-field">
+                    <label for="menu-search">Search the menu</label>
+                    <input id="menu-search" type="text" autocomplete="off" placeholder="Try “latte” or “chocolate”">
+                </div>
+                <div class="filter-group" role="group" aria-label="Filter menu by category">
+                    <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-button" type="button" data-filter="Coffee" aria-pressed="false">Coffee</button>
+                    <button class="filter-button" type="button" data-filter="Other drinks" aria-pressed="false">Other drinks</button>
+                    <button class="filter-button" type="button" data-filter="Snacks" aria-pressed="false">Snacks</button>
+                </div>
+            </div>
+            <p class="result-count" id="menu-count" role="status" aria-live="polite">Showing 8 of 8 items</p>
+            <div class="menu-grid" id="menu-list"></div>
+            <div class="empty-state" id="menu-empty" hidden>
+                <h3>No matching items</h3>
+                <p>Try a different search or choose another category.</p>
+                <button class="button button-secondary button-small" id="menu-clear" type="button">Clear search and filters</button>
+            </div>
+        </section>
+        <section class="coffee-guide" aria-labelledby="coffee-guide-title">
+            <div class="guide-heading-row">
+                <div class="section-heading">
+                    <p class="eyebrow">From the wider world of coffee</p>
+                    <h2 id="coffee-guide-title">Coffee guide</h2>
+                    <p>Six classic hot coffee styles, with ingredients and a short description.</p>
+                </div>
+                <a class="source-link" href="https://api.sampleapis.com/coffee/hot" target="_blank" rel="noopener noreferrer">Source: SampleAPIs coffee data</a>
+            </div>
+            <div class="api-state" id="coffee-loading" role="status" aria-live="polite">
+                <span class="loading-indicator" aria-hidden="true"></span>
+                <p>Loading the coffee guide…</p>
+            </div>
+            <div class="api-state api-state--error" id="coffee-error" role="alert" hidden>
+                <p>The coffee guide could not be loaded. Check your connection and try again.</p>
+                <button class="button button-secondary button-small" id="coffee-retry" type="button">Retry</button>
+            </div>
+            <div class="empty-state" id="coffee-empty" hidden>
+                <p>No reliable coffee guide entries are available right now.</p>
+            </div>
+            <div class="guide-grid" id="coffee-guide-grid"></div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="site-container footer-inner">
+            <div>
+                <a class="footer-logo" href="index.html">Coffee Shop</a>
+                <p>A neighbourhood café in Astana.</p>
+            </div>
+            <div class="footer-meta">
+                <p>DMT · SE-2509</p>
+                <p>Yernur Kanapiyauly &amp; Damir Argumbayev</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

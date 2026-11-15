@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find Coffee Shop in Astana, check opening hours and send the café team a message.">
+    <title>Contact | Coffee Shop</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="site-container header-inner">
+            <a class="site-logo" href="index.html">Coffee Shop</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li><a class="nav-link" href="about.html">About us</a></li>
+                    <li><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+                    <li><a class="nav-link" href="login.html" data-auth-link>Log in</a></li>
+                    <li><a class="nav-link nav-signup" href="signup.html">Sign up</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode">
+                <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span></span>
+                <span class="theme-label" data-theme-label>Light</span>
+            </button>
+        </div>
+    </header>
+    <main class="site-container page-main" id="main-content" tabindex="-1">
+        <div class="page-intro">
+            <p class="eyebrow">Visit or send a message</p>
+            <h1>Contact us</h1>
+            <p>Planning a visit or have a question about the menu? Find our details below or write to the team.</p>
+        </div>
+        <div class="contact-layout">
+            <section class="contact-details" id="visit-us" aria-labelledby="visit-us-title">
+                <img class="contact-photo" src="images/interior.jpg" alt="The Coffee Shop seating area and counter">
+                <h2 id="visit-us-title">Visit the café</h2>
+                <address>
+                    Turan Avenue<br>
+                    Astana, Kazakhstan<br>
+                    <a href="tel:+77771234567">+7 777 123 4567</a><br>
+                    <a href="mailto:hello@coffeeshop.kz">hello@coffeeshop.kz</a>
+                </address>
+                <h3>Opening hours</h3>
+                <dl class="hours-list">
+                    <div>
+                        <dt>Monday–Friday</dt>
+                        <dd>08:00–20:00</dd>
+                    </div>
+                    <div>
+                        <dt>Saturday–Sunday</dt>
+                        <dd>09:00–20:00</dd>
+                    </div>
+                </dl>
+            </section>
+            <section class="form-panel" aria-labelledby="contact-form-title">
+                <h2 id="contact-form-title">Send a message</h2>
+                <form class="form-grid" id="contact-form" novalidate>
+                    <div class="field">
+                        <label for="contact-name">Name</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" aria-describedby="contact-name-error">
+                        <p class="invalid-feedback" id="contact-name-error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="contact-email">Email</label>
+                        <input id="contact-email" name="email" type="text" autocomplete="email" inputmode="email" aria-describedby="contact-email-error">
+                        <p class="invalid-feedback" id="contact-email-error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="contact-phone">Phone</label>
+                        <input id="contact-phone" name="phone" type="text" autocomplete="tel" inputmode="tel" placeholder="+7 777 123 4567" aria-describedby="contact-phone-error">
+                        <p class="invalid-feedback" id="contact-phone-error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="5" aria-describedby="contact-message-error"></textarea>
+                        <p class="invalid-feedback" id="contact-message-error"></p>
+                    </div>
+                    <div>
+                        <button class="button button-primary" type="submit">Send message</button>
+                    </div>
+                    <p class="form-status" id="contact-status" role="status" aria-live="polite" hidden></p>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="site-container footer-inner">
+            <div>
+                <a class="footer-logo" href="index.html">Coffee Shop</a>
+                <p>A neighbourhood café in Astana.</p>
+            </div>
+            <div class="footer-meta">
+                <p>DMT · SE-2509</p>
+                <p>Yernur Kanapiyauly &amp; Damir Argumbayev</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

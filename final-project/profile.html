@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View the details saved in your local Coffee Shop account or log in to start a session.">
+    <title>Profile | Coffee Shop</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="site-container header-inner">
+            <a class="site-logo" href="index.html">Coffee Shop</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li><a class="nav-link" href="about.html">About us</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="login.html" data-auth-link>Log in</a></li>
+                    <li><a class="nav-link nav-signup" href="signup.html">Sign up</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode">
+                <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span></span>
+                <span class="theme-label" data-theme-label>Light</span>
+            </button>
+        </div>
+    </header>
+    <main class="site-container page-main" id="main-content" tabindex="-1">
+        <div class="page-intro">
+            <p class="eyebrow">Your local account</p>
+            <h1>Your profile</h1>
+            <p>Account information is read from this browser and your password is never shown.</p>
+        </div>
+        <section class="profile-empty" id="profile-logged-out" aria-labelledby="login-prompt-title">
+            <h2 id="login-prompt-title">Log in to view your profile</h2>
+            <p>There is no active account session on this device. Log in with a registered account, or create a new one first.</p>
+            <div class="button-row">
+                <a class="button button-primary" href="login.html">Go to log in</a>
+                <a class="button button-secondary" href="signup.html">Sign up</a>
+            </div>
+        </section>
+        <section class="profile-card" id="profile-details" aria-labelledby="profile-name" hidden>
+            <div class="profile-card-header">
+                <h2 id="profile-name"></h2>
+                <p>Your saved Coffee Shop account details</p>
+            </div>
+            <dl class="profile-details">
+                <div>
+                    <dt>Email</dt>
+                    <dd id="profile-email"></dd>
+                </div>
+                <div>
+                    <dt>Phone</dt>
+                    <dd id="profile-phone"></dd>
+                </div>
+            </dl>
+            <div class="profile-actions">
+                <button class="button button-secondary" id="logout-button" type="button">Log out</button>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="site-container footer-inner">
+            <div>
+                <a class="footer-logo" href="index.html">Coffee Shop</a>
+                <p>A neighbourhood café in Astana.</p>
+            </div>
+            <div class="footer-meta">
+                <p>DMT · SE-2509</p>
+                <p>Yernur Kanapiyauly &amp; Damir Argumbayev</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
