@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Read the Coffee Shop story, meet DMT team members Yernur Kanapiyauly and Damir Argumbayev, and browse the café gallery.">
+    <meta name="description" content="The Coffee Shop story, the DMT team behind it, and a small gallery from the café.">
     <title>About us | Coffee Shop</title>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="about">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
         <div class="site-container header-inner">
             <a class="site-logo" href="index.html">Coffee Shop</a>
@@ -20,7 +19,6 @@
                     <li><a class="nav-link active" href="about.html" aria-current="page">About us</a></li>
                     <li><a class="nav-link" href="contact.html">Contact</a></li>
                     <li><a class="nav-link" href="login.html" data-auth-link>Log in</a></li>
-                    <li><a class="nav-link nav-signup" href="signup.html">Sign up</a></li>
                 </ul>
             </nav>
             <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode">
@@ -29,81 +27,50 @@
             </button>
         </div>
     </header>
-    <main class="site-container page-main" id="main-content" tabindex="-1">
+    <main class="site-container page-main">
         <div class="page-intro">
-            <p class="eyebrow">Our story and our team</p>
-            <h1>About Coffee Shop</h1>
-            <p>A small café concept built around warm hospitality, useful study space and coffee without fuss.</p>
+            <h1>About us</h1>
+            <p>Coffee Shop is a student project by DMT, group SE-2509. We set out to build the kind of neighbourhood café we would visit ourselves: calm, simple and friendly, with a short menu of well-made classics.</p>
         </div>
-        <section class="story-grid" aria-labelledby="story-title">
-            <img src="images/cafe.jpg" alt="Warm pendant lights and an illuminated café sign">
-            <div class="story-copy">
-                <h2 id="story-title">A simple idea, made welcoming</h2>
-                <p>Coffee Shop began as a student project by DMT, a two-person team from group SE-2509. We wanted to create the kind of neighbourhood café we would use ourselves: calm, affordable and easy to settle into.</p>
-                <p>Our short menu keeps the focus on well-made classics and fresh snacks. Whether you arrive with a laptop or a friend, there is always time for a proper coffee break.</p>
-            </div>
-        </section>
-        <section class="content-section" aria-labelledby="team-title">
-            <div class="section-heading">
-                <h2 id="team-title">Meet the team</h2>
-                <p>The two DMT members behind the project.</p>
-            </div>
+        <section class="page-section" aria-labelledby="team-title">
+            <h2 id="team-title">Meet the team</h2>
             <div class="team-grid">
                 <article class="team-member">
                     <h3>Yernur Kanapiyauly</h3>
-                    <p class="team-role">DMT · SE-2509</p>
-                    <p>Yernur developed the Home and About pages, shaping the café introduction, visual layout and photography gallery.</p>
+                    <p>Built the Home and About pages, including the layout and gallery.</p>
                 </article>
                 <article class="team-member">
                     <h3>Damir Argumbayev</h3>
-                    <p class="team-role">DMT · SE-2509</p>
-                    <p>Damir developed the Menu and Contact experiences, including item filtering, café details and visitor form validation.</p>
+                    <p>Built the Menu and Contact pages, including search, filtering and form validation.</p>
                 </article>
             </div>
         </section>
-        <section class="content-section" id="gallery" aria-labelledby="gallery-title">
-            <div class="section-heading">
-                <h2 id="gallery-title">Coffee gallery</h2>
-                <p>Moments and details that make a café feel like a familiar place.</p>
-            </div>
+        <section class="page-section" aria-labelledby="gallery-title">
+            <h2 id="gallery-title">Gallery</h2>
             <div class="gallery-grid">
                 <figure class="gallery-item">
-                    <img src="images/break.jpg" alt="Friends bringing three different coffee drinks together">
-                    <figcaption>Coffee shared with friends</figcaption>
+                    <img src="images/break.jpg" alt="Three different coffee drinks shared between friends">
+                    <figcaption>Coffee with friends</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="images/cups.jpg" alt="Pour-over coffee being prepared with a gooseneck kettle">
+                    <img src="images/cups.jpg" alt="Pour-over coffee being prepared">
                     <figcaption>A careful pour-over</figcaption>
                 </figure>
                 <figure class="gallery-item">
                     <img src="images/beans.jpg" alt="Freshly roasted coffee beans">
-                    <figcaption>Roasted coffee beans</figcaption>
+                    <figcaption>Fresh beans</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="images/latte.jpg" alt="Three latte cups on a wooden table surrounded by plants">
-                    <figcaption>Latte art and greenery</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/croissant.jpg" alt="A golden butter croissant ready to serve">
-                    <figcaption>A fresh morning pastry</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/interior.jpg" alt="Tables and chairs in a bright neighbourhood café">
-                    <figcaption>Room to sit and stay awhile</figcaption>
+                    <img src="images/interior.jpg" alt="Tables and chairs inside the café">
+                    <figcaption>Room to sit and stay</figcaption>
                 </figure>
             </div>
         </section>
     </main>
     <footer class="site-footer">
         <div class="site-container footer-inner">
-            <div>
-                <a class="footer-logo" href="index.html">Coffee Shop</a>
-                <p>A neighbourhood café in Astana.</p>
-            </div>
-            <div class="footer-meta">
-                <p>DMT · SE-2509</p>
-                <p>Yernur Kanapiyauly &amp; Damir Argumbayev</p>
-            </div>
+            <p><a class="footer-logo" href="index.html">Coffee Shop</a></p>
+            <p>DMT · SE-2509 · Yernur Kanapiyauly & Damir Argumbayev</p>
         </div>
     </footer>
 </body>

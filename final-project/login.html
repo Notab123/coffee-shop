@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Log in to your locally stored Coffee Shop account and view your profile.">
-    <title>Log in | Coffee Shop</title>
+    <meta name="description" content="Log in to your Coffee Shop account or create a new local account in this browser.">
+    <title>Your account | Coffee Shop</title>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="login">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
         <div class="site-container header-inner">
             <a class="site-logo" href="index.html">Coffee Shop</a>
@@ -20,7 +19,6 @@
                     <li><a class="nav-link" href="about.html">About us</a></li>
                     <li><a class="nav-link" href="contact.html">Contact</a></li>
                     <li><a class="nav-link active" href="login.html" data-auth-link aria-current="page">Log in</a></li>
-                    <li><a class="nav-link nav-signup" href="signup.html">Sign up</a></li>
                 </ul>
             </nav>
             <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode">
@@ -29,17 +27,19 @@
             </button>
         </div>
     </header>
-    <main class="site-container page-main" id="main-content" tabindex="-1">
+    <main class="site-container page-main">
         <div class="page-intro">
-            <p class="eyebrow">Welcome back</p>
-            <h1>Log in to Coffee Shop</h1>
-            <p>Enter the email and password for an account saved on this device.</p>
+            <h1>Your account</h1>
+            <p>Log in to an account saved on this device, or create a new one.</p>
         </div>
         <div class="auth-layout">
-            <section class="form-panel" aria-labelledby="login-title">
-                <h2 id="login-title">Account login</h2>
-                <p class="form-status form-status--success" id="registration-success" role="status" hidden>Your account has been created. You can now log in.</p>
-                <form class="form-grid" id="login-form" novalidate>
+            <section class="form-panel">
+                <div class="auth-tabs" role="group" aria-label="Choose a form">
+                    <button class="tab-button" type="button" data-auth-tab="login" aria-pressed="true">Log in</button>
+                    <button class="tab-button" type="button" data-auth-tab="signup" aria-pressed="false">Sign up</button>
+                </div>
+                <form class="form-grid" id="login-form" novalidate aria-labelledby="login-form-title">
+                    <h2 class="form-title" id="login-form-title">Log in</h2>
                     <div class="field">
                         <label for="login-email">Email</label>
                         <input id="login-email" name="email" type="text" autocomplete="email" inputmode="email" aria-describedby="login-email-error">
@@ -48,36 +48,59 @@
                     <div class="field">
                         <label for="login-password">Password</label>
                         <input id="login-password" name="password" type="password" autocomplete="current-password" aria-describedby="login-password-hint login-password-error">
-                        <p class="field-hint" id="login-password-hint">Use at least 8 characters with uppercase, lowercase and a number.</p>
+                        <p class="field-hint" id="login-password-hint">At least 8 characters with uppercase, lowercase and a number.</p>
                         <p class="invalid-feedback" id="login-password-error"></p>
                     </div>
                     <div>
                         <button class="button button-primary" type="submit">Log in</button>
                     </div>
-                    <p class="form-status" role="status" aria-live="polite" hidden></p>
+                    <p class="form-status" id="login-status" hidden></p>
                 </form>
-                <p class="form-footer-link">New to Coffee Shop? <a href="signup.html">Create an account</a>.</p>
+                <form class="form-grid" id="signup-form" hidden novalidate aria-labelledby="signup-form-title">
+                    <h2 class="form-title" id="signup-form-title">Create an account</h2>
+                    <div class="field">
+                        <label for="signup-name">Name</label>
+                        <input id="signup-name" name="name" type="text" autocomplete="name" aria-describedby="signup-name-error">
+                        <p class="invalid-feedback" id="signup-name-error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="signup-email">Email</label>
+                        <input id="signup-email" name="email" type="text" autocomplete="email" inputmode="email" aria-describedby="signup-email-error">
+                        <p class="invalid-feedback" id="signup-email-error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="signup-phone">Phone</label>
+                        <input id="signup-phone" name="phone" type="text" autocomplete="tel" inputmode="tel" placeholder="+7 777 123 4567" aria-describedby="signup-phone-error">
+                        <p class="invalid-feedback" id="signup-phone-error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="signup-password">Password</label>
+                        <input id="signup-password" name="password" type="password" autocomplete="new-password" aria-describedby="signup-password-hint signup-password-error">
+                        <p class="field-hint" id="signup-password-hint">At least 8 characters with uppercase, lowercase and a number.</p>
+                        <p class="invalid-feedback" id="signup-password-error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="signup-confirm">Confirm password</label>
+                        <input id="signup-confirm" name="confirmPassword" type="password" autocomplete="new-password" aria-describedby="signup-confirm-error">
+                        <p class="invalid-feedback" id="signup-confirm-error"></p>
+                    </div>
+                    <div>
+                        <button class="button button-primary" type="submit">Create account</button>
+                    </div>
+                    <p class="form-status" id="signup-status" hidden></p>
+                </form>
             </section>
-            <aside class="auth-aside" aria-labelledby="login-note-title">
-                <img src="images/coffee.jpg" alt="A freshly served cappuccino">
-                <div class="auth-aside-content">
-                    <h2 id="login-note-title">Your profile awaits</h2>
-                    <p>Log in to see the name, email and phone number saved with your local account.</p>
-                    <p>Your password is used only for the credential check and is never displayed.</p>
-                </div>
+            <aside class="auth-aside">
+                <h2>Local accounts</h2>
+                <p>Accounts are stored only in this browser. Your details never leave your device.</p>
+                <p>Your password is used only to check your login and is never shown.</p>
             </aside>
         </div>
     </main>
     <footer class="site-footer">
         <div class="site-container footer-inner">
-            <div>
-                <a class="footer-logo" href="index.html">Coffee Shop</a>
-                <p>A neighbourhood café in Astana.</p>
-            </div>
-            <div class="footer-meta">
-                <p>DMT · SE-2509</p>
-                <p>Yernur Kanapiyauly &amp; Damir Argumbayev</p>
-            </div>
+            <p><a class="footer-logo" href="index.html">Coffee Shop</a></p>
+            <p>DMT · SE-2509 · Yernur Kanapiyauly & Damir Argumbayev</p>
         </div>
     </footer>
 </body>
